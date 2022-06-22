@@ -26,12 +26,12 @@ let dog = {
 //////////////////////////// PROBLEM 3 ////////////////////////////
 /* Print out the name of the dog you created in problem 2 using dot-notation. */
 
-console.log(dog.name)
+// console.log(dog.name)
 
 //////////////////////////// PROBLEM 4 ////////////////////////////
 /* Print out the color of the dog you created in problem 2 using bracket-notation. */
 
-console.log(dog[`color`])
+// console.log(dog[`color`])
 
 //////////////////////////// PROBLEM 5 ////////////////////////////
 /*
@@ -53,16 +53,16 @@ let favoriteThings = {
   favorite car and then another key named 'show' with the value being your favorite show.
 */
 
-favoriteThings.car = "Nissan Skyline",
-favoriteThings.show = "Naruto",
+favoriteThings.car = "Nissan Skyline"
+favoriteThings.show = "Naruto"
 
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
   and change the value of the book key in your favoriteThings object to be 'Harry Potter'. (If they were either of those things already, change them to something else.)
 */
 
-favoriteThings.food = "Chicken Nuggets",
-favoriteThings.book = "Harry Potter",
+favoriteThings.food = "Chicken Nuggets"
+favoriteThings.book = "Harry Potter"
 
 //////////////////////////// PROBLEM 6 ////////////////////////////
 
@@ -71,7 +71,7 @@ var carDetails = {
   color: 'red',
   make: 'toyota',
   model: 'tacoma',
-  year: 1994
+  year: 1994,
 }
 // Do not edit the code above.
 
@@ -79,10 +79,10 @@ var carDetails = {
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
 
-let carColor = carDetails.color
-let carMake = carDetails.make
-let carModel = carDetails.model
-let carYear = carDetails.year
+let {carColor} = carDetails.color
+let {carMake} = carDetails.make
+let {carModel} = carDetails.model
+let {carYear} = carDetails.year
 
 //////////////////////////// PROBLEM 7 ////////////////////////////
 
@@ -114,20 +114,21 @@ function greeting( obj ) {
   Sum up the values and return the total number.
 */
 
-function totalPopulation() {
-  let states = {
-    utah: 4,
-    california: 7,
-    texas: 8,
-    arizona: 5,
-  }
+let state = {
+  utah: 4,
+  california: 7,
+  texas: 8,
+  arizona: 6,
 }
 
-let newTah = totalPopulation.utah
-let newFornia = totalPopulation.california
-let newTehas = totalPopulation.texas
-let newZona = totalPopulation.arizona
-console.log(newtah + newFornia + newTehas + newZona)
+function totalPopulation(obj) {
+  total = 0
+  for(let value in state) {
+    total += state[value]
+  }
+  return total
+}
+// console.log(totalPopulation(state))
 
 //////////////////////////// PROBLEM 9 ////////////////////////////
 
@@ -139,9 +140,21 @@ console.log(newtah + newFornia + newTehas + newZona)
   Push these new variables to an array and return the array. 
 */
 
-//Code Here
+let food = {
+  carb: "Bread",
+  fat: "Butter",
+  protein: "Steak"
+}
 
-
+function ingredients(obj) {
+  let highCarb = food.carb
+  let lowFat = food.fat
+  let newProtein = food.protein
+  let listArr = []
+  listArr.push(highCarb, lowFat, newProtein)
+  return listArr
+}
+console.log(ingredients(food))
 
 //////////////////////////// PROBLEM 10 ////////////////////////////
 // Do not edit the code below.
@@ -161,7 +174,7 @@ var user = {
   Make that change without modifying the original object code above.
 */
 
-//Code Here
+
 
 
 //////////////////////////// PROBLEM 11 ////////////////////////////
