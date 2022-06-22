@@ -226,7 +226,7 @@ class Wizard {
   }
 }
 let harry = new Wizard("Harry", "16", "Expecto Patronum")
-harry.castSpell();
+// harry.castSpell();
 
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
@@ -251,8 +251,26 @@ harry.castSpell();
     to be newPrice.
 */
 
-//Code Here
+class Phone {
+  constructor(brand, model, storage, color, price, sold) {
+    this.brand = brand;
+    this.model = model;
+    this.storage = storage;
+    this.color = color;
+    this.price = price;
+    this.sold = false;
+  }
 
+  sell() {
+    console.log(`${this.brand} ${this.model} has been sold`);
+    return this.sold = true;
+  }
+
+  changePrice(newPrice) {
+    this.price = newPrice;
+    console.log(`New price for ${this.brand} is ${newPrice}`)
+  }
+}
   
 /*
     Next make three new phone instances using your class.
@@ -264,8 +282,12 @@ harry.castSpell();
     - price: number
 */
 
-//Code Here
-
+let cell = new Phone("samsung", "s21", "12", "silver", "800")
+// cell.sell()
+let hardPhone = new Phone("Verizon", "Touchless", "6", "white", "250")
+// hardPhone.sell()
+let workPhone = new Phone("iPhone", "15", "250", "pearl", "1500")
+// workPhone.sell()
 /* 
   Call the changePrice function on one of your phones, 
   don't forget to pass in a new price 
@@ -273,8 +295,7 @@ harry.castSpell();
   Then console.log that object to see the price change
 */ 
 
-//Code Here 
-
+// cell.changePrice(600)
 
 /*
   Now call the sell method on one of your other phone objects
@@ -282,8 +303,8 @@ harry.castSpell();
   Print the value of that phone's sell property to make sure it's been changed to true
 */
 
-//Code Here 
-
+// hardPhone.sell()
+// console.log(hardPhone.sold)
 
 //////////////////////////// PROBLEM 15 ////////////////////////////
 
@@ -301,9 +322,8 @@ const colors = {
 }
 //do not edit this object
 
-//Code Here 
-
-
+colorsCopy = {...colors}
+// console.log(colorsCopy)
 
 /*
  Now use the spread operator to combine the following 2 objects into one. 
@@ -329,8 +349,8 @@ const shippingInfo = {
 }
 //do not edit the objects above
 
-//Code Here
-
+let helensInfo = {...contactInfo, ...shippingInfo}
+console.log(helensInfo)
 
 //Print helensInfo to see what it looks like, there should be no repeating properties.
 
