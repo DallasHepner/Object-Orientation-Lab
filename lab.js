@@ -4,7 +4,10 @@
   Give it a key of name with the value being your name, and another key of age with the value being your age.
 */
 
-
+let me = {
+  name: "Dallas",
+  age: 23,
+}
 
 //////////////////////////// PROBLEM 2 ////////////////////////////
 
@@ -13,23 +16,22 @@
 //name (a string), color (a string), age (a number),
 //and goodBoy/goodGirl (a boolean).
 
-//Code here
-
-
+let dog = {
+  name: "Bella",
+  color: "Golden",
+  age: 5,
+  goodGirl: true,
+}
 
 //////////////////////////// PROBLEM 3 ////////////////////////////
 /* Print out the name of the dog you created in problem 2 using dot-notation. */
 
-//Code here
-
-
+console.log(dog.name)
 
 //////////////////////////// PROBLEM 4 ////////////////////////////
 /* Print out the color of the dog you created in problem 2 using bracket-notation. */
 
-//Code here
-
-
+console.log(dog[`color`])
 
 //////////////////////////// PROBLEM 5 ////////////////////////////
 /*
@@ -37,14 +39,20 @@
   Have the values to those keys be strings that are equal to your favorite thing in that category.
 */
 
-//Code here
-
+let favoriteThings = {
+  band: "Jason Aldean",
+  food: "Sloppy Joes",
+  person: "The Wifey",
+  book: "Steelheart",
+  movie: "Ready Player One",
+  holiday: "Thanksgiving",
+}
 
 /*
-  After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car and then another key named 'show' with the value being your favorite show.
+  After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your 
+  favorite car and then another key named 'show' with the value being your favorite show.
 */
 
-//Code here
 
 
 /*
