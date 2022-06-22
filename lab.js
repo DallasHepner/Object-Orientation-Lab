@@ -350,10 +350,9 @@ const shippingInfo = {
 //do not edit the objects above
 
 let helensInfo = {...contactInfo, ...shippingInfo}
-console.log(helensInfo)
 
 //Print helensInfo to see what it looks like, there should be no repeating properties.
-
+// console.log(helensInfo)
 
 //////////////////////////// PROBLEM 16 ////////////////////////////
 
@@ -366,15 +365,26 @@ console.log(helensInfo)
   Inside the function, add the number of miles to the object's mileage.
   And finally, print the value of the mileage.
 */
+ 
+class Vehicle {
+  constructor(capacity, color, mileage) {
+  this.capacity = capacity;
+  this.color = color;
+  this.mileage = mileage;
+  }
 
-//Code Here 
-
+  move(miles){
+    let mileage2 = (this.mileage + miles)
+    console.log(mileage2)
+  }
+}
 
 /*
   Create a vehicle using your new class and save it to a variable called myFirstVehicle
 */
 
-//Code Here
+let myFirstVehicle = new Vehicle("5", "purple", 150000)
+// myFirstVehicle.move(45)
 
 
 /* 
@@ -385,17 +395,25 @@ console.log(helensInfo)
   new ones: make and isCool. (Hint: don't forget to call the super function)
 */
 
-//Code Here
+class Motorcycle extends Vehicle {
+  constructor(capacity, color, mileage, make, isCool){
+    super(capacity, color, mileage);
+    this.make = make;
+    this.isCool = true;
+  }
+}
 
 /*
   Create a Motorcycle using your new class and save it to a variable called myFirstMotorcycle
 */
 
-//Code Here 
+let myFirstMotorcycle = new Motorcycle("2", "blue", 75000, "Kawasaki")
 
 /*
   Call the move function on myFirstMotorcycle (don't forget the parameter)
 */
+
+// myFirstMotorcycle.move(1500)
 
 /*
   Let's make another class based off of Vehicle. 
@@ -413,7 +431,27 @@ console.log(helensInfo)
   This function should set isSeaworthy to be true
 */
 
-//Code Here
+class Boat extends Vehicle {
+  constructor(capacity, color, mileage, name, type, isSeaworthy){
+    super(capacity, color, mileage)
+    this.name = name;
+    this.type = type;
+    this.isSeaworthy = false;
+  }
+
+  checkSeaworthiness() {
+    if(this.isSeaworthy === true) {
+      console.log(`The ${this.color} ${this.type}, ${this.name}, is seaworthy`)
+    }else{
+      console.log(`You need to get your ${this.type} in shape!`)
+    }
+  }
+
+  performMaintenance() {
+    console.log(`Maintenance on ${this.name} is finished!`)
+    return this.isSeaworthy = true;
+  }
+}
 
 
 /*
@@ -421,22 +459,22 @@ console.log(helensInfo)
   properties except isSeaworthy -- make that one false. Call your variable myFirstBoat.
 */
 
-//Code Here
+let myFirstBoat = new Boat("15", "white", 50000, "Betsy", "yacht")
 
 /*
   Call the checkSeaworthiness method on your new boat
 */
 
-//Code Here
+// myFirstBoat.checkSeaworthiness()
 
 /*
   Now run the performMaintenance method on your boat
 */
 
-//Code Here 
+// myFirstBoat.performMaintenance()
 
 /*
   Check the seaworthiness once more (you should be ready for the water!)
 */
 
-//Code Here
+// myFirstBoat.checkSeaworthiness()
