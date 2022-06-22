@@ -204,7 +204,7 @@ class Cat {
 }
 
 let alley = new Cat("Whiskers", "2", "orange");
-alley.greeting()
+// alley.greeting()
 
 //////////////////////////// PROBLEM 13 ////////////////////////////
 /*
@@ -214,7 +214,19 @@ alley.greeting()
   Call the castSpell function on the instance of your wizard.
 */
 
-//Code here
+class Wizard {
+  constructor(name, age, favoriteSpell) {
+    this.name = name;
+    this.age = age;
+    this.favoriteSpell = favoriteSpell;
+  }
+
+  castSpell() {
+    console.log(`${this.name} has cast ${this.favoriteSpell}`)
+  }
+}
+let harry = new Wizard("Harry", "16", "Expecto Patronum")
+harry.castSpell();
 
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
