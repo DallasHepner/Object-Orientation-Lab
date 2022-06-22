@@ -192,9 +192,19 @@ delete user.age
   Print the name of your cat instance using dot notation.
 */
 
-//Code here
+class Cat {
+  constructor(name, age, color){
+    this.name = name;
+    this.age = age;
+    this.color = color;
+  }
+  greeting() {
+    console.log(`Meow, I'm ${this.name}, I'm ${this.age} years old and I've always been ${this.color}`)
+  }
+}
 
-
+let alley = new Cat("Whiskers", "2", "orange");
+alley.greeting()
 
 //////////////////////////// PROBLEM 13 ////////////////////////////
 /*
